@@ -36,4 +36,10 @@ class DirectorsController < ApplicationController
 
     render({ :template => "director_templates/eldest" })
   end
+
+  def insert_director
+
+
+  end
+
 end
