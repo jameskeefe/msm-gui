@@ -41,7 +41,7 @@ class DirectorsController < ApplicationController
   def insert_director
     d = Director.new
     d.name = params[:the_name]
-    d.dob = params[:the_dob].to_d
+    d.dob = params[:the_dob]
     d.bio = params[:the_bio]
     d.image = params[:the_image_url]
     d.save()
@@ -60,7 +60,7 @@ class DirectorsController < ApplicationController
     the_id = params[:director_id]
     d = Director.where({:id => the_id}).first()
     d.name = params[:the_name]
-    d.dob = params[:the_dob].to_d
+    d.dob = params[:the_dob]
     d.bio = params[:the_bio]
     d.image = params[:the_image_url]
     d.save()

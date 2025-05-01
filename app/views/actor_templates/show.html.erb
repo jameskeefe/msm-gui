@@ -18,11 +18,11 @@
 <form method='post' action='/actors/update_actor/<%=@the_id%>'>
 <div>
 <label for = "name_field">Name</label>
-<input type="text" id = "name_field" name="the_title" value="<%= @the_actor.name%>">
+<input type="text" id = "name_field" name="the_name" value="<%= @the_actor.name%>">
 </div>
 <div>
 <label for = "dob_field">Dob</label>
-<input type="date" id = "dob_field" name="the_year" value=<%= @the_actor.dob%>>
+<input type="date" id = "dob_field" name="the_dob" value=<%= @the_actor.dob%>>
 </div>
 <div>
 <label for = "bio_field">Bio</label>
@@ -30,7 +30,7 @@
 </div>
 <div>
 <label for = "image_field">Image</label>
-<input type="text" id = "image_field" name="the_image" value="<%= @the_actor.image%>">
+<input type="text" id = "image_field" name="the_image_url" value="<%= @the_actor.image%>">
 </div>
 <div>
 <button>Update actor</button>

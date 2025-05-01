@@ -18,7 +18,7 @@ class ActorsController < ApplicationController
   def insert_actor
     a = Actor.new
     a.name = params[:the_name]
-    a.dob = params[:the_dob].to_d
+    a.dob = params[:the_dob]
     a.bio = params[:the_bio]
     a.image = params[:the_image_url]
     a.save()
@@ -37,7 +37,7 @@ class ActorsController < ApplicationController
     the_id = params[:actor_id]
     a = Actor.where({:id => the_id}).first()
     a.name = params[:the_name]
-    a.dob = params[:the_dob].to_d
+    a.dob = params[:the_dob]
     a.bio = params[:the_bio]
     a.image = params[:the_image_url]
     a.save()
